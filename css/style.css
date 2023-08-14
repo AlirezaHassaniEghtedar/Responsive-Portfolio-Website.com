@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --blue-color: #4070F4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* NAVIGATION MENU CSS */
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #FFF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--blue-color);
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .menu li a{
+    margin: 0 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--blue-color);
+}
+
+.social-icons a {
+    font-size: 18px;
+    margin: 0 6px;
+    color: var(--blue-color);
+}
+
+/* SIDE NAVIGATION MENU BUTTON CSS */
+
+.cancel-btn , .menu-btn {
+    display: none;
+    position: absolute;
+    font-size: 20px;
+    color: #FFF;
+    right: 20px;
+    top: 30px;
+    transition: 0.3s ease;
+}
+
+.menu-btn {
+    color: var(--blue-color);
+}
+
+/* HOME SECTION CSS */
+.home {
+    height: 100vh;
+    width: 100%;
+    background-color: #FFF;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
+}
+
+.home .personal-image img {
+    position: absolute;
+    width: 195px;
+    height: 432px;
+    bottom: 15%;
+    right: 25px;
+    border-radius: 5px;
+    
+}
+
+
+
+/* RESONSIVE MEDIA QUERY CSS */
+
+@media (max-width: 750px) {
+    .navbar .menu {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background-color: #0E2431;
+        align-items: center;
+        padding-top: 60px;
+        flex-direction: column;
+        transition: 0.5s all ease;
+    }
+
+    .navbar.active .menu {
+        left: 0;
+    }
+
+    .navbar .menu li a{
+        display: block;
+        font-size: 23px;
+        margin: 10px 0px;
+        color: #FFF;
+    }
+
+    .navbar .menu li a:hover {
+        color: var(--blue-color);
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a {
+        display: none;
+    }
+
+    .cancel-btn , .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .cancel-btn:hover {
+        color: var(--blue-color);
+        transition: color 0.3s ease;
+    }
+
+}
