@@ -19,8 +19,12 @@ nav {
     padding: 20px 0;
     font-family: 'Ubuntu', sans-serif;
     background-color: #FFF;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
+nav.sticky {
+    background-color: var(--blue-color);
 }
 
 .navbar {
@@ -37,6 +41,10 @@ nav {
     color: var(--blue-color);
 }
 
+nav.sticky .logo a {
+    color: #FFF;
+}
+
 .navbar .menu {
     display: flex;
     list-style: none;
@@ -49,10 +57,18 @@ nav {
     color: var(--blue-color);
 }
 
+nav.sticky .navbar .menu li a {
+    color: #FFF;
+}
+
 .social-icons a {
     font-size: 18px;
     margin: 0 6px;
     color: var(--blue-color);
+}
+
+nav.sticky .social-icons a {
+    color: #FFF;
 }
 
 /* SIDE NAVIGATION MENU BUTTON CSS */
@@ -75,23 +91,57 @@ nav {
 .home {
     height: 100vh;
     width: 100%;
-    background-color: #FFF;
+    background: url('../images/background.png') no-repeat;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
-    position: relative;
     z-index: -1;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.home .personal-image img {
-    position: absolute;
-    width: 195px;
-    height: 432px;
-    bottom: 15%;
-    right: 25px;
+.home-content {
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-one {
+    font-size: 25px;
+}
+.text-two {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.text-three {
+    font-size: 40px;
+}
+.text-four {
+    font-size: 23px;
+    margin: 5px 0;
+}
+
+.home-content button {
+    background-color: var(--blue-color);
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 600;
+    outline: 0;
+    border: 2px solid transparent;
+    padding: 8px 16px;
     border-radius: 5px;
-    
+    transition: all 0.3s ease;
 }
 
-
+.home-content button:hover {
+    background-color: #FFF;
+    color: var(--blue-color);
+    cursor: pointer;
+    border: 2px solid var(--blue-color);
+}
 
 /* RESONSIVE MEDIA QUERY CSS */
 
@@ -140,4 +190,19 @@ nav {
         transition: color 0.3s ease;
     }
 
+    nav.sticky .menu-btn {
+        color: #FFF;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .text-two {
+        font-size: 55px;
+        font-weight: 600;
+        margin-left: -3px;
+    }
+    .text-three {
+        font-size: 30px;
+    }
 }
