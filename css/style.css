@@ -41,6 +41,14 @@ nav.sticky {
     color: var(--blue-color);
 }
 
+.logo , .navbar .menu li , .social-icons a {
+    transition: 0.3s ease;
+}
+
+.logo:hover ,.navbar .menu li:hover , .social-icons a:hover{
+    transform: scale(1.1);
+}
+
 nav.sticky .logo a {
     color: #FFF;
 }
@@ -59,6 +67,10 @@ nav.sticky .logo a {
 
 nav.sticky .navbar .menu li a {
     color: #FFF;
+}
+
+nav.sticky .navbar .menu li a:hover {
+    color: #051b57;
 }
 
 .social-icons a {
